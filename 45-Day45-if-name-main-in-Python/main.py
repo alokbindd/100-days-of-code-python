@@ -1,0 +1,2 @@
+import alok
+alok.welcome()
