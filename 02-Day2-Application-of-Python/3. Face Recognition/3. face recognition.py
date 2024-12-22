@@ -1,11 +1,11 @@
 import cv2
 
 #Loading The Cascade File
-face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
+face_cascade = cv2.CascadeClassifier('D:/Python-lang/02-Day2-Application-of-Python/3. Face Recognition/haarcascade_frontalface_default.xml')
 
 #Reading the Input Image
 # image= cv2.imread('1.jpg')
-image= cv2.imread('1.png')
+image= cv2.imread('D:/Python-lang/02-Day2-Application-of-Python/3. Face Recognition/1.png')
 
 #Resizing the Image
 img = cv2.resize(image,None,fx=0.3,fy=0.3)
