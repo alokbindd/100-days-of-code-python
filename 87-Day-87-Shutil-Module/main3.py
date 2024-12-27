@@ -1,6 +1,5 @@
 import shutil
 
-
 path = "D:/Python-lang/87-Day-87-Shutil-Module"
 
 # Use an ignore function to exclude existing "tutorial" folders
