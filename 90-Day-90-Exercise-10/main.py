@@ -15,8 +15,6 @@ from bs4 import BeautifulSoup
 #        'country=us&'
 #        f'apiKey={creds.api_key}')
 
-# url = (f'https://newsapi.org/v2/top-headlines?sources=google-news-in&apiKey={creds.api_key}')
-
 # #BBC News
 # url = ('https://newsapi.org/v2/top-headlines?'
 #        'sources=bbc-news&'
@@ -33,7 +31,6 @@ for articles in news["articles"]:
     print(f"Title: {articles['title']}")
     print(f"descdescription: {articles['description']}")
     print("----------------------------------------------------------------------------------------------------------------------------------------------")
-
 
 # print(response.json())
 # soup = BeautifulSoup(response.text,'html.parser')
