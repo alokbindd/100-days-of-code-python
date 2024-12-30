@@ -1,4 +1,4 @@
 creds.py
 creds.cpython-311.pyc
 sample/
-.gitignore
+*.pdf
