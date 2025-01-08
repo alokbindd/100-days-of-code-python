@@ -1,3 +1,4 @@
+# Attributes Of Label & Pack I
 from tkinter import *
 root = Tk()
 root.geometry("744x433")
