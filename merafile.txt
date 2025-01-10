@@ -1,6 +1,13 @@
-Hello, myself Alok Bind
-I am pursuing bachelor degree in computer engineering
-And i am currently completing 100 days code of python challenge
-Its 50th day of my challenge
-I am enjoying it 
-#U0001F606
+List of member:
+
+Name:Alok
+Age:21
+Email:alok@mail.com
+
+Name:Dhiraj
+Age:51
+Email:dhiraj@mail.com
+
+Name:Niraj
+Age:22
+Email:niraj@mail.com
