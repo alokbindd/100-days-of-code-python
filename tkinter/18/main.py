@@ -19,5 +19,3 @@ scrollbar.config(command=listbox.yview)
 #scrollbar.config(command=text.yview)
 
 root.mainloop()
-#ok
-#ok
