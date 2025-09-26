@@ -17,31 +17,37 @@ questions = [
 ]
 
 levels = [1000,2000,3000,5000,10000,20000,40000,80000,160000,320000,640000,1250000,2500000,5000000,10000000]
-money = 0
+
+money = 0 #current prize
+guaranteed = 0 #milestones
+milestones = {4:10000,9:320000,14:10000000}
 
 for i in range(0,len(questions)):
-  question = questions[i]
-  # print(question)
-  print(f"Question for Rs. {levels[i]}")
-  print(f"\n{question[0]}")
-  print(f"1.{question[1]}        2.{question[2]}")
-  print(f"3.{question[3]}        4.{question[4]}")
-  reply = int(input("\nChoose between (1-4) or enter 0 to quit: \n"))
-  if reply == 0:
-    if i == 0:
-      money = 0
-    else:
-      money = levels[i-1]
-    break
-  if reply == (question[-1]):
-    print(f"Correct answer you won rs {levels[i]}\n")
-    if i == 4:
-      money = 10000
-    elif i == 9:
-      money == 320000
-    elif i == 15:
-      money = 10000000
-  else:
-      print(f"Incorrect answer you lost rs {levels[i]}")
+    question = questions[i]
+    # print(question)
+    print(f"Question for Rs {levels[i]}")
+    print(f"\n{question[0]}")
+    
+    print(f"1. {question[1]}     2. {question[2]}")
+    print(f"3. {question[3]}     4. {question[4]}\n")
 
-print(f"You take home money rs {money}")
+    reply = int(input("Choose between (1-4) or enter 0 to quit:\n"))
+    if reply == 0:
+        print("You choose to quit")
+        money = guaranteed #take last money prize
+        break
+    
+    if reply == question[-1]:
+        money = levels[i]
+        print(f"Correct answer! You won Rs{money}")
+
+        #check milestones
+        if i in milestones:
+            guaranteed = milestones[i]
+            print(f"Congratulations! You reached a milestone: Rs {guaranteed} guaranteed")
+    else:
+        print("Incorrect answer. You lost")
+        money = guaranteed
+        break
+    
+print(f"You take home Rs {money}")
