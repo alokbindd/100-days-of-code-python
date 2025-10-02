@@ -9,18 +9,21 @@ import random
 def game():
     choices = ["snake","water","gun"]
     computer = random.choice(choices)
-    
-    user  = input('''Enter Chocies ("Snake","Water","Gun"): ''').lower()
-    if user not in choices:
-        print("Not Valid option")
-    
-    print("Computer choices:" + computer)
+    while True:
+        user  = input('''Enter Chocies ("Snake","Water","Gun","Quit"): ''').lower()
+        if (user == "quit"):
+            print("You choose to Quit")
+            break
+        elif user not in choices:
+            print("Not Valid option")
 
-    if(user == computer):
-        print("Its Tie")
-    elif (user == "snake" and computer == "gun") or (user == "water" and computer == "snake") or (user == "gun" and computer == "water"):
-        print("You lose")
-    else:
-        print("You win") 
+        print("Computer choices:" + computer)
+        
+        if(user == computer):
+            print("Its Tie")
+        elif (user == "snake" and computer == "gun") or (user == "water" and computer == "snake") or (user == "gun" and computer == "water"):
+            print("You lose")
+        else:
+            print("You win") 
 
 game()
