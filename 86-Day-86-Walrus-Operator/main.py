@@ -26,12 +26,17 @@
 #     print("Name not fouund")
 
 names = ["alok", "dhiraj", "niraj", "Manish"]
-if (name := input("Enter your name: ")) in names:
-    print(f"Hello {name}")
-else:
-    print("Name not found")
-    if input("Wanna become a member? yes/no").lower() == "yes":
-        names.append()
-        print(f"Welcome {name}, You are now a member")
+while True:
+    if (name := input("Enter your name: ")) in names:
+        print(f"Hello {name}")
+    else:
+        print("Name not found")
+        if input("Wanna become a member? yes/no:").lower() == "yes":
+            # name = input("Enter Your name")
+            names.append(name)
+            print(f"Welcome {name}, You are now a member")
+        else:
+            break
 
-  
+print(names)
+ 
